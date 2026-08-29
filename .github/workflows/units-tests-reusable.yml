@@ -1,6 +1,8 @@
 name: Reusable units test workflow
 
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       ref:
