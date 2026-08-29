@@ -2,6 +2,8 @@ name: Run Playwright Tests (Docker Pull)
 # This workflow is used to run Playwright tests in a Docker container pulled from the registry
 
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       shards:
