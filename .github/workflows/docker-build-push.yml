@@ -10,9 +10,8 @@ env:
   NODE_OPTIONS: '--max-old-space-size=7168'
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
-
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       n8n_version:
@@ -41,14 +40,6 @@ on:
         description: 'URL to call after the build is successful'
         required: false
         type: string
-
-  pull_request:
-    types:
-      - opened
-      - ready_for_review
-    paths:
-      - '.github/workflows/docker-build-push.yml'
-      - 'docker/images/n8n/Dockerfile'
 
 jobs:
   determine-build-context:
