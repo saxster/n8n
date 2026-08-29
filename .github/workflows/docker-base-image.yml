@@ -6,10 +6,6 @@ on:
       - master
     paths:
       - 'docker/images/n8n-base/Dockerfile'
-  pull_request:
-    paths:
-      - 'docker/images/n8n-base/Dockerfile'
-
 jobs:
   build:
     runs-on: ubuntu-latest
