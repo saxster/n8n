@@ -1,6 +1,8 @@
 name: Playwright Tests - Reusable
 
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       test-mode:
