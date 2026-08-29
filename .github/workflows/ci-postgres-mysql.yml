@@ -1,19 +1,9 @@
 name: Test Postgres and MySQL schemas
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push:
+    branches: [main]
   workflow_dispatch:
-  pull_request:
-    paths:
-      - packages/cli/src/databases/**
-      - packages/@n8n/db/**
-      - packages/cli/src/modules/*/database/**
-      - packages/cli/test/integration/**
-      - packages/cli/test/shared/db/**
-      - packages/@n8n/db/**
-      - .github/workflows/ci-postgres-mysql.yml
-      - .github/docker-compose.yml
   pull_request_review:
     types: [submitted]
 
